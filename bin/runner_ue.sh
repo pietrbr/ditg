@@ -6,7 +6,7 @@ if [[ $# -eq 0 ]]; then
 elif [[ ! $# -eq 1 ]]; then
     echo 'Too many parameters passed, retry'
     exit 1
-elif [[ $1 -eq 'background_traffic' or $1 -eq 'command_ack' ]]; then
+elif [[ ! $1 -eq 'background_traffic' && ! $1 -eq 'command_ack' ]]; then
     echo 'Wrong parameter'
     exit 2
 fi
