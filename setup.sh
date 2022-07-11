@@ -7,7 +7,6 @@ cd ../bin
 cp ../src/ITGSend/ITGSend ./
 cp ../src/ITGDec/ITGDec ./
 cp ../src/ITGLog/ITGLog ./
-cp ../src/ITGPlot/ITGPlot ./
 cp ../src/ITGRecv/ITGRecv ./
 cp ../src/ITGManager/ITGManager ./
 
