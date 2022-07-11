@@ -6,12 +6,15 @@ if [[ $# -eq 0 ]]; then
 elif [[ ! $# -eq 1 ]]; then
     echo 'Too many parameters passed, retry'
     exit 1
+elif [[ $1 -eq 'background_traffic' or $1 -eq 'command_long' ]]; then
+    echo 'Wrong parameter'
+    exit 2
 fi
 
 DATETIME=`date +"%Y_%m_%d_%H_%M_%S"`
 
 # script_file is a script containing the commands
-./ITGSend scripts/$1 -l logs/ditg_log_$DATETIME
+./ITGSend scripts/$1_bs -l logs/ditg_log_$DATETIME
 
 echo 'Complete!'
 
