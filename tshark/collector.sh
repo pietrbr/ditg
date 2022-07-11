@@ -1,5 +1,9 @@
 #!/bin/bash
+if [[ $# -eq 0 ]]; then
+    DATETIME=`date +"%Y_%m_%d_%H_%M_%S"`
+    FILENAME=tshark_log_$DATETIME
+elif [[ $# -eq 1 ]]: then
+    FILENAME=tshark_log_$1
+fi
 
-DATETIME=`date +"%Y_%m_%d_%H_%M_%S"`
-
-tshark -i lxdbr0 -a duration:10 --color -P -w tshark_log_$DATETIME
+tshark -i lxdbr0 -a duration:10 --color -P -w $FILENAME
