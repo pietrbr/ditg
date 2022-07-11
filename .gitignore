@@ -38,7 +38,7 @@ src/ITGManager/ITGManager
 
 # Folders
 bin/*
-!bin/runner.sh
+!bin/runner*
 !bin/scripts
 !bin/scripts/*
 
