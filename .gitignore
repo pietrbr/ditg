@@ -43,6 +43,6 @@ bin/
 .vscode/
 
 ## PIETRO
-tshark/log*
+tshark/tshark_log*
 bin/logs/*
 bin/logs
