@@ -41,3 +41,8 @@ bin/
 
 # Visual studio code
 .vscode/
+
+## PIETRO
+tshark/log*
+bin/logs/*
+bin/logs
