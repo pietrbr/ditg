@@ -1,8 +1,8 @@
 #!/bin/bash
 
-mkdir bin
+#mkdir bin
 mkdir bin/logs
-mv script_file runner.sh -t bin/
+#mv scripts runner.sh -t bin/
 
 cd src
 make -j4

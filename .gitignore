@@ -37,7 +37,10 @@ src/ITGRecv/ITGRecv
 src/ITGManager/ITGManager
 
 # Folders
-bin/
+bin/*
+!bin/runner.sh
+!bin/scripts
+!bin/scripts/*
 
 # Visual studio code
 .vscode/
