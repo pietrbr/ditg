@@ -8,13 +8,15 @@ res = []
 summ=0
 n=0
 pckts_size=[]
+dir_path=['capture-armed-1.pcapng', 'capture-armed-2.pcapng']
 # Iterate directory
-for file in os.listdir(dir_path):
+for file in dir_path:
     # check only text files
     if file.endswith('.pcapng'):
         cap = pyshark.FileCapture(file)
         print(file)
         for pckt in cap:
+            print(pckt.tcp)
             if("TCP" in str(pckt.layers)):
                 #summ=summ+int(pckt.tcp.len)
                 #n=n+1
