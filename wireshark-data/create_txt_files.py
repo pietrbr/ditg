@@ -1,6 +1,9 @@
 import pyshark
 import os
 
+import time
+start_time = time.time()
+
 # PARAMETERS
 mavlink_hl_string = "MAVLINK_PROTO"
 file_dir = os.path.dirname(os.path.realpath(__file__))
@@ -21,7 +24,7 @@ tr1 = 0
 
 for file in os.listdir(file_dir):
     # check only .pcapng files
-    if file.endswith('flight-1.pcapng'):
+    if file.endswith('background_traffic_p.pcapng'):
         print("Analyzing ", file, "...")
         cap = pyshark.FileCapture(
             file_dir + '/' + file,
@@ -35,7 +38,7 @@ for file in os.listdir(file_dir):
             if pckt.highest_layer == mavlink_hl_string:
                 cnt = cnt + 1
                 # forth
-                if int(pckt.tcp.srcport) == 5760:
+                if int(pckt.tcp.dstport) == 5760:
                     cnta = cnta + 1
                     # size
                     fa.write(str(pckt.tcp.len) + "\n")
@@ -49,7 +52,7 @@ for file in os.listdir(file_dir):
                         pass
 
                 # back
-                elif int(pckt.tcp.dstport) == 5760:
+                elif int(pckt.tcp.srcport) == 5760:
                     cntr = cntr + 1
                     # size
                     fr.write(str(pckt.tcp.len) + "\n")
@@ -72,3 +75,5 @@ fa.close()
 ga.close()
 fr.close()
 gr.close()
+
+print("--- %s seconds ---" % (time.time() - start_time))
