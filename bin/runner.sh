@@ -8,16 +8,16 @@ DATETIME=`date +"%Y_%m_%d_%H_%M_%S"`
 
 case $1 in
 
-  bs__bg_cl)
+  bs)
     echo "Starting base station with background traffic and command_long"
-    ./ITGSend $1 -l logs/ditg_log_$DATETIME\_bs
+    ./ITGSend bs__bg_cl -l logs/ditg_log_$DATETIME\_bs
     echo "Complete!"
     ./ITGDec logs/ditg_log_$DATETIME\_bs
     ;;
 
-  ue__bg_ca)
+  ue)
     echo "Starting user equipment with background traffic and command_ack"
-    ./ITGSend $1 -l logs/ditg_log_$DATETIME\_ue
+    ./ITGSend ue__bg_ca -l logs/ditg_log_$DATETIME\_ue
     echo "Complete!"
     ./ITGDec logs/ditg_log_$DATETIME\_ue
     ;;
