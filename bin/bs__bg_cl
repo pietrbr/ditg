@@ -1,2 +1,2 @@
--a 10.244.105.241 -Fs traffic_generator/background_traffic_size_a -Ft traffic_generator/background_traffic_time_a -T TCP -sp 8901
--a 10.244.105.241 -Fs traffic_generator/command_long_size -Ft traffic_generator/command_long_size -T TCP -sp 8900
+-a 10.244.105.241 -Fs background_traffic_size_a -Ft background_traffic_time_a -T TCP -sp 8901
+-a 10.244.105.241 -Fs command_long_size -Ft command_long_size -T TCP -sp 8900
