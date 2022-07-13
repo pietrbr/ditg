@@ -1,1 +1,1 @@
--a 10.244.105.38 -sp 8901 -Fs background_traffic_size_r -Ft background_traffic_time_r -T TCP
+-a 10.244.105.38 -Fs background_traffic_size_r.txt -Ft background_traffic_time_r.txt -T TCP -sp 9000

@@ -1,2 +1,2 @@
--a 10.244.105.241 -Fs background_traffic_size_a -Ft background_traffic_time_a -T TCP -sp 8901
--a 10.244.105.241 -Fs command_long_size -Ft command_long_size -T TCP -sp 8900
+-a 10.244.105.241 -Fs background_traffic_size_a.txt -Ft background_traffic_time_a.txt -T TCP -sp 9000
+-a 10.244.105.241 -Fs command_long_size.txt -Ft command_long_size.txt -T TCP -sp 9001
