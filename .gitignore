@@ -36,14 +36,15 @@ src/ITGSend/ITGSend
 src/ITGRecv/ITGRecv
 src/ITGManager/ITGManager
 
+# Visual studio code
+.vscode/
+
 # Folders
 bin/*
 !bin/runner*
-!bin/scripts
-!bin/scripts/*
-
-# Visual studio code
-.vscode/
+!bin/bs*
+!bin/ue*
+!bin/background*
 
 ## PIETRO
 tshark/tshark_log*
