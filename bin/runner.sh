@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# echo -n "Enter the name of a country: "
-# read COUNTRY
-# echo -n "The official language of $COUNTRY is "
-
 DATETIME=`date +"%Y_%m_%d_%H_%M_%S"`
 
 case $1 in
@@ -26,3 +22,30 @@ case $1 in
     echo -n "argument not recognised"
     ;;
 esac
+
+
+# echo -n "Enter the name of a country: "
+# read COUNTRY
+# echo -n "The official language of $COUNTRY is "
+
+
+# case "$1:$2:$3" in
+
+# OK:*)
+#     # Nothing needs done
+#     echo -n "OK:1"
+#     ;;
+
+# CRITICAL:SOFT:[12])
+#     soft_reset_pool.sh
+#     ;;
+
+# CRITICAL:HARD:[12])
+#     hard_reset_pool.sh
+#     ;;
+
+# CRITICAL:HARD:[34])
+#     hard_reset_service
+#     ;;
+
+# esac
