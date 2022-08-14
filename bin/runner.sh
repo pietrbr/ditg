@@ -6,16 +6,37 @@ case $1 in
 
   bs)
     echo "Starting base station with background traffic and command_long"
-    ./ITGSend bs__bg_cl -l logs/ditg_log_$DATETIME\_bs
+    ./ITGSend bs -l logs/ditg_log_$DATETIME\_bs
     echo "Complete!"
     ./ITGDec logs/ditg_log_$DATETIME\_bs
     ;;
 
-  ue)
+  uav)
     echo "Starting user equipment with background traffic and command_ack"
-    ./ITGSend ue__bg_ca -l logs/ditg_log_$DATETIME\_ue
+    ./ITGSend uav -l logs/ditg_log_$DATETIME\_uav
     echo "Complete!"
-    ./ITGDec logs/ditg_log_$DATETIME\_ue
+    ./ITGDec logs/ditg_log_$DATETIME\_uav
+    ;;
+
+  ue_05)
+    echo "Starting user equipment with background traffic and command_ack"
+    ./ITGSend ue_05 -l logs/ditg_log_$DATETIME\_ue_05
+    echo "Complete!"
+    ./ITGDec logs/ditg_log_$DATETIME\_ue_05
+    ;;
+
+  ue_10)
+    echo "Starting user equipment with background traffic and command_ack"
+    ./ITGSend ue_10 -l logs/ditg_log_$DATETIME\_ue_10
+    echo "Complete!"
+    ./ITGDec logs/ditg_log_$DATETIME\_ue_10
+    ;;
+
+  ue_20)
+    echo "Starting user equipment with background traffic and command_ack"
+    ./ITGSend ue_20 -l logs/ditg_log_$DATETIME\_ue_20
+    echo "Complete!"
+    ./ITGDec logs/ditg_log_$DATETIME\_ue_20
     ;;
 
   *)

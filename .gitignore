@@ -43,6 +43,7 @@ src/ITGManager/ITGManager
 bin/*
 !bin/runner*
 !bin/bs*
+!bin/uav*
 !bin/ue*
 !bin/background*
 
