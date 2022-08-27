@@ -4,12 +4,6 @@ DATETIME=`date +"%Y_%m_%d_%H_%M_%S"`
 
 case $1 in
 
-  bs)
-    echo "Starting base station with background traffic and command_long"
-    ./ITGSend bs -l logs/ditg_log_$DATETIME\_bs
-    echo "Complete!"
-    ./ITGDec logs/ditg_log_$DATETIME\_bs
-    ;;
 
   uav)
     echo "Starting user equipment with background traffic and command_ack"
@@ -18,25 +12,46 @@ case $1 in
     ./ITGDec logs/ditg_log_$DATETIME\_uav
     ;;
 
-  ue_05)
-    echo "Starting user equipment with background traffic and command_ack"
-    ./ITGSend ue_05 -l logs/ditg_log_$DATETIME\_ue_05
+  bs)
+    echo "Starting base station with background traffic and command_long"
+    ./ITGSend bs -l logs/ditg_log_$DATETIME\_bs
     echo "Complete!"
-    ./ITGDec logs/ditg_log_$DATETIME\_ue_05
+    ./ITGDec logs/ditg_log_$DATETIME\_bs
     ;;
 
-  ue_10)
-    echo "Starting user equipment with background traffic and command_ack"
-    ./ITGSend ue_10 -l logs/ditg_log_$DATETIME\_ue_10
+  bs_1uav)
+    echo "Starting base station with background traffic and command_long"
+    ./ITGSend bs_1uav -l logs/ditg_log_$DATETIME\_bs_1uav
     echo "Complete!"
-    ./ITGDec logs/ditg_log_$DATETIME\_ue_10
+    ./ITGDec logs/ditg_log_$DATETIME\_bs_1uav
     ;;
 
-  ue_20)
-    echo "Starting user equipment with background traffic and command_ack"
-    ./ITGSend ue_20 -l logs/ditg_log_$DATETIME\_ue_20
+  bs_3uav)
+    echo "Starting base station with background traffic and command_long"
+    ./ITGSend bs_3uav -l logs/ditg_log_$DATETIME\_bs_3uav
     echo "Complete!"
-    ./ITGDec logs/ditg_log_$DATETIME\_ue_20
+    ./ITGDec logs/ditg_log_$DATETIME\_bs_3uav
+    ;;
+
+  bs_3uav_3ue05)
+    echo "Starting base station with background traffic and command_long"
+    ./ITGSend bs_3uav_3ue05 -l logs/ditg_log_$DATETIME\_bs_3uav_3ue05
+    echo "Complete!"
+    ./ITGDec logs/ditg_log_$DATETIME\_bs_3uav_3ue05
+    ;;
+
+  bs_3uav_3ue10)
+    echo "Starting base station with background traffic and command_long"
+    ./ITGSend bs_3uav_3ue10 -l logs/ditg_log_$DATETIME\_bs_3uav_3ue10
+    echo "Complete!"
+    ./ITGDec logs/ditg_log_$DATETIME\_bs_3uav_3ue10
+    ;;
+
+  bs_3uav_3ue20)
+    echo "Starting base station with background traffic and command_long"
+    ./ITGSend bs_3uav_3ue20 -l logs/ditg_log_$DATETIME\_bs_3uav_3ue20
+    echo "Complete!"
+    ./ITGDec logs/ditg_log_$DATETIME\_bs_3uav_3ue20
     ;;
 
   *)

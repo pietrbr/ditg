@@ -1,2 +1,2 @@
--a 10.244.105.38 -Fs background_traffic_size_r -Ft background_traffic_time_r -T TCP -t 2700000
--a 10.244.105.38 -C 5 -c 22 -T TCP -t 2700000
+-a 172.16.0.1 -Fs background_traffic_size_r -Ft background_traffic_time_r -T TCP -t 2700000
+-a 172.16.0.1 -C 5 -c 22 -T TCP -t 2700000
