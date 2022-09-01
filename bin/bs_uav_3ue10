@@ -1,0 +1,5 @@
+-a 172.16.0.8 -Fs background_traffic_size_a -Ft background_traffic_time_a -T TCP -t 2700000
+-a 172.16.0.8 -C 5 -c 44 -T TCP -t 2700000
+-a 172.16.0.9 -C 300 -c 415 -T TCP -t 2700000
+-a 172.16.0.10 -C 300 -c 415 -T TCP -t 2700000
+-a 172.16.0.11 -C 300 -c 415 -T TCP -t 2700000
