@@ -41,25 +41,25 @@ case $1 in
     ./ITGDec logs/ditg_log_$DATETIME\_bs_uav_3ue10
     ;;
 
-  bs_3uav_3ue05)
+  bs_uav_3ue05)
     echo "Starting base station with background traffic and command_long"
-    ./ITGSend bs_3uav_3ue05 -l logs/ditg_log_$DATETIME\_bs_3uav_3ue05
+    ./ITGSend bs_uav_3ue05 -l logs/ditg_log_$DATETIME\_bs_uav_3ue05
     echo "Complete!"
-    ./ITGDec logs/ditg_log_$DATETIME\_bs_3uav_3ue05
+    ./ITGDec logs/ditg_log_$DATETIME\_bs_uav_3ue05
     ;;
 
-  bs_3uav_3ue10)
+  bs_uav_3ue10)
     echo "Starting base station with background traffic and command_long"
-    ./ITGSend bs_3uav_3ue10 -l logs/ditg_log_$DATETIME\_bs_3uav_3ue10
+    ./ITGSend bs_uav_3ue10 -l logs/ditg_log_$DATETIME\_bs_uav_3ue10
     echo "Complete!"
-    ./ITGDec logs/ditg_log_$DATETIME\_bs_3uav_3ue10
+    ./ITGDec logs/ditg_log_$DATETIME\_bs_uav_3ue10
     ;;
 
-  bs_3uav_3ue20)
+  bs_uav_3ue20)
     echo "Starting base station with background traffic and command_long"
-    ./ITGSend bs_3uav_3ue20 -l logs/ditg_log_$DATETIME\_bs_3uav_3ue20
+    ./ITGSend bs_uav_3ue20 -l logs/ditg_log_$DATETIME\_bs_uav_3ue20
     echo "Complete!"
-    ./ITGDec logs/ditg_log_$DATETIME\_bs_3uav_3ue20
+    ./ITGDec logs/ditg_log_$DATETIME\_bs_uav_3ue20
     ;;
 
   *)
